@@ -22,5 +22,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 'dependencies'
+      - name: 'Install Depdencies'
         run: 'yarn'
+
+      - name: 'Node TAP'
+        run: cat output/example-tap.txt | yarn tap -
